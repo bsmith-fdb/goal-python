@@ -5,7 +5,7 @@ class Vehicle:
     class_variable = "foo"
 
     # default_tire = 'tire'
-    def __init__(self, distance_traveled=0, unit='miles'):
+    def __init__(self, distance_traveled=0, unit='miles', **kwargs):
         """
         Customizes the initialization of the object
         """
