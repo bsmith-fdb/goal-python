@@ -3,27 +3,30 @@ class Vehicle:
     Vehicle is a type that describes a machine that helps us travel
     """
     class_variable = "foo"
-    default_tire = 'tire'
-    def __init__(self, engine, tires):
+
+    # default_tire = 'tire'
+    def __init__(self, distance_traveled=0, unit='miles'):
         """
         Customizes the initialization of the object
         """
-        self.engine = engine
-        self.tires = tires
+        self.distance_traveled = distance_traveled
+        self.unit = unit
+        # self.engine = engine
+        # self.tires = tires
 
     # decorators
-    @classmethod
-    def bicycle(cls, tires=None):
-        if not tires:
-            tires = [cls.default_tire, cls.default_tire]
-        return cls(None, tires)
+    # @classmethod
+    # def bicycle(cls, tires=None):
+    #     if not tires:
+    #         tires = [cls.default_tire, cls.default_tire]
+    #     return cls(None, tires)
 
     @staticmethod
     def funk():
         print("hello from funk")
 
     def description(self):
-        print(f"Engine: {self.engine} Tires: {self.tires}")
+        return f"DistanceTraveled={self.distance_traveled} Unit={self.unit}"
 
 
 if __name__ == "__main__":
@@ -35,4 +38,3 @@ if __name__ == "__main__":
     bike.description()
     Vehicle.funk()
     bike.funk()
-
