@@ -1,5 +1,5 @@
 # manipulating the "from helpers import *"
-__all__ = ['extract_upper']  # will hide for * import. can still be imported explicitly
+__all__ = ['extract_upper', 'extract_lower']  # will hide for * import. can still be imported explicitly
 
 
 def _private_function():  # name begins with underscore. it's hidden. must import explicitly
@@ -7,6 +7,12 @@ def _private_function():  # name begins with underscore. it's hidden. must impor
 
 
 def extract_upper(phrase):
+    """
+    takes a string and returns a list containing
+    only the uppercase characters from the string.
+    >>> extract_upper("Hi There, BOB")
+    ['H', 'T', 'B', 'O', 'B']
+    """
     return list(filter(str.isupper, phrase))
 
 

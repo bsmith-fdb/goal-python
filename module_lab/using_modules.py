@@ -1,7 +1,8 @@
 # 1) Import the built-in `math` module
 import math
 # 2) Import the `reverse` and `shuffle` from the custom `strhelpers` module (Needs to be created)
-strhe
+from strhelpers import reverse
+from strhelpers import str_shuffle as shuffle
 name = "Kevin Bacon"
 
 assert math.ceil(14.11) == 15, f"Expected 15, but got {math.ceil(14.11)}"
